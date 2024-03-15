@@ -39,8 +39,8 @@ async function fetchHeadTags(url) {
     }
 }
 
-// Export for CommonJS
+// Export the fetchHeadTags function CommonJS
 module.exports = fetchHeadTags;
 
-// Export for ES6 modules
+// Export the fetchHeadTags function ES6 module
 module.exports.default = fetchHeadTags;

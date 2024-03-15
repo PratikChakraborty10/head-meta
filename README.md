@@ -1,20 +1,20 @@
-# Meta Head (fetchHeadTags)
+# Head Meta (fetchHeadTags)
 
 This is a Node.js package that extracts meta tags and link tags from a given URL. It can be used in both CommonJS and ES6 module environments.
 
 ## Installation
 
-You can install My Metadata Parser via npm:
+You can install ```head-meta```  via npm:
 
 ```bash
-npm install meta-head
+npm install head-meta
 ```
 ## Usage
 ### CommonJS Environment
 ```bash
-const fetchTags = require('meta-head');
+const fetchHeadTags = require('head-meta');
 
-fetchTags('https://pratikchakraborty.in')
+fetchHeadTags('https://pratikchakraborty.in')
     .then(tags => console.log(tags))
     .catch(error => console.error(error));
 ```
@@ -22,16 +22,16 @@ fetchTags('https://pratikchakraborty.in')
 ### ES6 Modules
 
 ```bash
-import fetchTags from 'my-metadata-parser';
+import fetchHeadTags from 'head-meta';
 
-fetchTags('https://pratikchakraborty.in')
+fetchHeadTags('https://pratikchakraborty.in')
     .then(tags => console.log(tags))
     .catch(error => console.error(error));
  ```
 
 ## API
 
-``fetchTags(url: string): Promise<object>``
+``fetchHeadTags(url: string): Promise<object>``
 
 This function fetches meta tags and link tags from the specified URL.
 Returns a Promise that resolves to an object containing the extracted meta tags and link tags.
