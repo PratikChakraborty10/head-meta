@@ -9,6 +9,11 @@ You can install ```head-meta```  via npm:
 ```bash
 npm install head-meta
 ```
+You can install ```head-meta```  via yarn:
+
+```bash
+yarn add head-meta
+```
 ## Usage
 ### CommonJS Environment
 ```bash
@@ -24,9 +29,14 @@ fetchHeadTags('https://pratikchakraborty.in')
 ```bash
 import fetchHeadTags from 'head-meta';
 
-fetchHeadTags('https://pratikchakraborty.in')
-    .then(tags => console.log(tags))
-    .catch(error => console.error(error));
+const parseMeatData = async () => {
+  try {
+    const tags = await fetchHeadTags('https://www.pratikchakraborty.in/');
+    console.log(tags)
+  } catch (error) {
+    console.error('Error fetching meta data:', error.message);
+  }
+};
  ```
 
 ## API
